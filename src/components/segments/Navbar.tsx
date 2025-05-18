@@ -16,16 +16,16 @@ const Navbar = () => {
     const pathname = usePathname();
     return (
         <>
-            <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+            <nav className=" w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
                 <a className="flex" href="#top">
                     <p className="text-3xl font-semibold italic bg-gradient-to-r from-purple-500 to-sky-400 text-transparent bg-clip-text font-[cursive] ">
                         Rafioul Sourav
                     </p>
                     <p className="mt-6 h-2 w-2 rounded-full bg-pink-500"></p>
                 </a>
-                <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3  shadow-sm bg-opacity-50">
+                <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3  shadow-sm shadow-purple-500 bg-opacity-50">
                     {
-                        navItems.map((nav, idx) => (<Link key={idx} className="font-Ovo" href={`${nav.path}`}> <li className={`${pathname === nav.path ? 'border-b-2 border-purple-500' : ''}`}>{nav.label}</li></Link>))
+                        navItems.map((nav, idx) => (<Link key={idx} className="font-Ovo" href={`${nav.path}`}> <li className={`text-white  ${pathname === nav.path ? 'border-b-2 border-purple-500' : ''}`}>{nav.label}</li></Link>))
                     }
                 </ul>
                 {/* mobile menu */}

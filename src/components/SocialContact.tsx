@@ -2,27 +2,27 @@ import { FaGithub, FaEnvelope, FaUserAlt, FaWhatsapp } from "react-icons/fa";
 
 const links = [
     {
-        href: "https://github.com/your-username",
+        href: "https://github.com/rafioul-hasan-58",
         label: "GitHub",
-        icon: <FaGithub className="border-[1px] w-[60px] h-[60px] group-hover:border-0 p-4 border-purple-300" />,
+        icon: <FaGithub className="border-[1px] w-[60px] h-[60px] group-hover:border-0 p-4 border-purple-300  border-l-0" />,
         color: "text-white",
     },
     {
         href: "mailto:you@example.com",
         label: "Email",
-        icon: <FaEnvelope className="border-[1px] border-purple-300 border-t-0 w-[60px] h-[60px] group-hover:border-0 p-4" />,
+        icon: <FaEnvelope className="border-[0.5px] border-purple-300 border-t-0 w-[60px] h-[60px] group-hover:border-0 p-4  border-l-0" />,
         color: "text-red-500",
     },
     {
         href: "/resume.pdf",
         label: "Resume",
-        icon: <FaUserAlt className="border-[1px] border-purple-300 border-t-0 w-[60px] h-[60px] group-hover:border-0 p-4" />,
+        icon: <FaUserAlt className="border-[1px] border-purple-300 border-t-0 w-[60px] h-[60px] group-hover:border-0 p-4  border-l-0" />,
         color: "text-white",
     },
     {
         href: "https://wa.me/your-number",
         label: "WhatsApp",
-        icon: <FaWhatsapp className="border-[1px] border-purple-300 border-t-0 w-[60px] h-[60px] group-hover:border-0 p-4" />,
+        icon: <FaWhatsapp className="border-[1px] border-purple-300 border-t-0 w-[60px] h-[60px] group-hover:border-0 p-4 border-l-0" />,
         color: "text-green-500",
     },
 ];
@@ -39,7 +39,7 @@ export default function SocialContact() {
                     className="group relative flex items-center"
                 >
                     {/* Bordered container that expands on hover */}
-                    <div className="overflow-hidden transition-all duration-300 border-l-4 border-r border-transparent group-hover:border-purple-500 group-hover:w-40 w-20 h-full  bg-black flex items-center">
+                    <div className="overflow-hidden transition-all duration-300 border  border-transparent group-hover:border-purple-500 group-hover:w-40 w-[65px] h-full   bg-black flex items-center">
                         {/* Icon */}
                         <div
                             className={` ${link.color} transition-transform duration-300 group-hover:translate-x-2`}
