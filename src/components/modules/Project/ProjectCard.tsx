@@ -1,45 +1,37 @@
-import { IPortfolio } from "@/types";
+import { Button } from "@/components/ui/button";
+import { IProject } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
-import { AiFillLike } from "react-icons/ai";
-import { MdArrowOutward } from "react-icons/md";
+import { format } from 'date-fns'
 
-const PortfolioCard = ({ item }: { item: IPortfolio }) => {
+const ProjectCard = ({ project }: { project: IProject }) => {
     return (
         <div>
-            <div key={item._id} className=" lg:w-[440px] p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 shrink"
+            <div className=" p-6 rounded-xl shadow-md hover:shadow-lg  duration-300 shrink border flex gap-3 bg-gradient-to-br from-[#3f0d75] via-[#5e2aa0] to-[#7e3ff2] hover:shadow-purple-500/40 hover:scale-[1.01] transition"
                 style={{ boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)" }}>
-                <div className="w-[380px] h-[280px] rounded-xl overflow-hidden cursor-pointer">
-                    <Link href={`/portfolio/${item._id}`}>
+                <div className="w-[60%] rounded-xl overflow-hidden cursor-pointer">
+                    <Link href={`/portfolio/${project._id}`}>
                         {
-                            item.image ? (<Image
-                                width={500}
-                                height={500}
-                                src={item.image}
+                            project?.images ? (<Image
+                                width={300}
+                                height={220}
+                                src={project?.images[0]}
                                 alt="image"
-                                className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                                className="w-[300px] h-[220px] object-cover transition-transform duration-300 ease-in-out hover:scale-110"
                             />) : null
                         }
 
                     </Link>
                 </div>
-                <div className="cursor-pointer">
-                    <div className="flex justify-between mt-6">
-                        <p className="text-[#FF0050] uppercase">d e v e l o p m e n t</p>
-                        <p className="flex items-center gap-2"><AiFillLike /> <span>600</span></p>
-                    </div>
-                    <h1 className="text-3xl mt-3 flex items-center gap-2 hover:text-[#FF0050] group">
-                        <Link href={`/portfolio/${item._id}`}>
-                            {item.title}
-                        </Link>
-                        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <MdArrowOutward className="hover:text-[#FF0050]" />
-                        </span>
-                    </h1>
+                <div className="w-[45%]">
+                    <p className="text-white text-xl font-semibold ">{project?.title}</p>
+                    <p className=" text-xs text-gray-300 my-1">{project?.createdAt && format(new Date(project?.createdAt), 'dd, MMM, yyyy')}</p>
+                    <p className="mt-2 text-[#e5e5e5]">{project.description.split(' ').slice(0, 8).join(' ')}...</p>
+                    <Button className="mt-6 bg-white text-[#3f0d75] hover:bg-gray-100" style={{cursor:"pointer"}}>View More</Button>
                 </div>
             </div>
         </div>
     );
 };
 
-export default PortfolioCard;
+export default ProjectCard;

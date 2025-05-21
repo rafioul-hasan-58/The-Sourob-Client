@@ -4,30 +4,31 @@ const links = [
     {
         href: "https://github.com/rafioul-hasan-58",
         label: "GitHub",
-        icon: <FaGithub className="border-[1px] w-[60px] h-[60px] group-hover:border-0 p-4 border-purple-300  border-l-0" />,
+        icon: <FaGithub className="border-[1px] w-[60px] h-[60px] group-hover:border-0 p-4 border-gray-600  border-l-0" />,
         color: "text-white",
     },
     {
         href: "mailto:you@example.com",
         label: "Email",
-        icon: <FaEnvelope className="border-[0.5px] border-purple-300 border-t-0 w-[60px] h-[60px] group-hover:border-0 p-4  border-l-0" />,
+        icon: <FaEnvelope className="border-[0.5px] border-gray-600 border-t-0 w-[60px] h-[60px] group-hover:border-0 p-4  border-l-0" />,
         color: "text-red-500",
     },
     {
         href: "/resume.pdf",
         label: "Resume",
-        icon: <FaUserAlt className="border-[1px] border-purple-300 border-t-0 w-[60px] h-[60px] group-hover:border-0 p-4  border-l-0" />,
+        icon: <FaUserAlt className="border-[1px] border-gray-600 border-t-0 w-[60px] h-[60px] group-hover:border-0 p-4  border-l-0" />,
         color: "text-white",
     },
     {
         href: "https://wa.me/your-number",
         label: "WhatsApp",
-        icon: <FaWhatsapp className="border-[1px] border-purple-300 border-t-0 w-[60px] h-[60px] group-hover:border-0 p-4 border-l-0" />,
+        icon: <FaWhatsapp className="border-[1px] border-gray-600 border-t-0 w-[60px] h-[60px] group-hover:border-0 p-4 border-l-0" />,
         color: "text-green-500",
     },
 ];
 
 export default function SocialContact() {
+    
     return (
         <div className="fixed lg:top-1/3 lg:left-0 z-50 top-[80px]">
             {links.map((link, i) => (

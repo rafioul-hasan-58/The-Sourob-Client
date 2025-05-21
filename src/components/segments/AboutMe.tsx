@@ -3,7 +3,7 @@ import Image from "next/image";
 const AboutMe = () => {
     return (
         <div>
-            <h1 className="text-3xl text-white mb-5 text-center font-bold mt-6">About Me</h1>
+            <h1 className="text-4xl text-white mb-5 text-center font-bold mt-10">About Me</h1>
             <div className="mx-[85px] mt-10 flex gap-16">
                 <div className="w-[70%]">
                     <p className="text-white text-2xl font-semibold my-4">What I usually do</p>

@@ -1,39 +1,33 @@
 import { IBlog } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
-import { AiFillLike } from "react-icons/ai";
-import { MdArrowOutward } from "react-icons/md";
-
-const BlogCard = ({ item }: { item: IBlog }) => {
+import { format } from 'date-fns'
+import { Button } from "@/components/ui/button";
+const BlogCard = ({ blog }: { blog: IBlog }) => {
     // console.log(item);
     return (
         <div>
-            <div className=" lg:w-[440px] bg-gradient-to-br from-gray-100 via-gray-50 to-white p-8 rounded-xl shadow-xl hover:shadow-lg transition-shadow duration-300 shrink"
+            <div className="bg-gray-800 text-white shadow-xl hover:shadow-lg transition-shadow duration-300 shrink p-4 rounded-xl"
                 style={{ boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)" }}>
-                <Link href={`/blogs/${item?._id}`}>
-                    <div className="w-[380px] h-[280px] rounded-xl overflow-hidden cursor-pointer">
+                <Link href={`/blogs/${blog?._id}`}>
+                    <div className=" rounded-xl overflow-hidden cursor-pointer">
                         {
-                            item?.image ? (<Image
+                            blog?.images ? (<Image
                                 width={500}
                                 height={500}
-                                src={item.image}
+                                src={blog.images[0]}
                                 alt="image"
-                                className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                                className=" h-[220px] object-cover transition-transform duration-300 ease-in-out hover:scale-110"
                             />) : null
                         }
                     </div>
                 </Link>
-                <div className="cursor-pointer">
-                    <div className="flex justify-between mt-6">
-                        <p className="text-[#FF0050] uppercase">d e v e l o p m e n t</p>
-                        <p className="flex items-center gap-2"><AiFillLike /> <span>600</span></p>
-                    </div>
-                    <h1 className="text-3xl mt-3 flex items-center gap-2 hover:text-[#FF0050] group h-[30px] pb-2">
-                        {item.title}
-                        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <MdArrowOutward className="hover:text-[#FF0050]" />
-                        </span>
-                    </h1>
+                <div>
+                    <p className="text-white text-2xl font-semibold my-2">{blog.title.split(' ').slice(0, 3).join(' ')}...</p>
+                    <p className=" text-xs text-gray-300 my-1">{blog?.createdAt && format(new Date(blog?.createdAt), 'dd, MMM, yyyy')}</p>
+                    <Button className="my-2.5 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 text-white hover:from-purple-600 hover:to-purple-800 transition-all duration-300">
+                        View More
+                    </Button>
                 </div>
             </div>
         </div>
