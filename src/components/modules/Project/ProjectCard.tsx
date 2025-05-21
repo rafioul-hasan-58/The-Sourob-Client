@@ -26,8 +26,10 @@ const ProjectCard = ({ project }: { project: IProject }) => {
                 <div className="w-[45%]">
                     <p className="text-white text-xl font-semibold ">{project?.title}</p>
                     <p className=" text-xs text-gray-300 my-1">{project?.createdAt && format(new Date(project?.createdAt), 'dd, MMM, yyyy')}</p>
-                    <p className="mt-2 text-[#e5e5e5]">{project.description.split(' ').slice(0, 8).join(' ')}...</p>
-                    <Button className="mt-6 bg-white text-[#3f0d75] hover:bg-gray-100" style={{cursor:"pointer"}}>View More</Button>
+                    <p className="mt-2 text-[#e5e5e5]">{project?.description?.split(' ').slice(0, 8).join(' ')}...</p>
+                    <Link href={`/projects/details/${project._id}`}>
+                        <Button className="mt-6 bg-white text-[#3f0d75] hover:bg-gray-100" style={{ cursor: "pointer" }}>View More</Button>
+                    </Link>
                 </div>
             </div>
         </div>

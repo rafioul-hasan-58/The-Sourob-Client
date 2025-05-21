@@ -25,9 +25,11 @@ const BlogCard = ({ blog }: { blog: IBlog }) => {
                 <div>
                     <p className="text-white text-2xl font-semibold my-2">{blog.title.split(' ').slice(0, 3).join(' ')}...</p>
                     <p className=" text-xs text-gray-300 my-1">{blog?.createdAt && format(new Date(blog?.createdAt), 'dd, MMM, yyyy')}</p>
-                    <Button className="my-2.5 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 text-white hover:from-purple-600 hover:to-purple-800 transition-all duration-300">
-                        View More
-                    </Button>
+                    <Link href={`/blogs/details/${blog._id}`}>
+                        <Button className="my-2.5 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 text-white hover:from-purple-600 hover:to-purple-800 transition-all duration-300">
+                            View More
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </div>
