@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Toaster } from 'react-hot-toast';
 
 import "./globals.css";
 
@@ -18,6 +19,7 @@ export default function RootLayout({
         className={`antialiased  bg-cover bg-no-repeat bg-center min-h-screen bg-black`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );

@@ -18,7 +18,7 @@ const Banner = () => {
                     <p className="lg:text-5xl text-3xl font-bold my-4 text-white">
                         <span className="text-purple-500 mx-2">a</span>
                         <Typewriter
-                            words={['Team Member', 'Full Stack Developer.', 'Learner.']}
+                            words={['Programmer', 'Full Stack Developer.', 'Learner.']}
                             loop={-1}
                             typeSpeed={80}
                             deleteSpeed={80}

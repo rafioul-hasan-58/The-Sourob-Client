@@ -19,3 +19,8 @@ export interface IMessage {
     message: string;
     email: string;
 }
+export interface ISkill {
+    title: string,
+    icon: string,
+    description: string
+}
