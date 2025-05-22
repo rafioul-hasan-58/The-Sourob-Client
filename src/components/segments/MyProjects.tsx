@@ -5,8 +5,7 @@ import { Button } from "../ui/button";
 
 const MyProjects = async () => {
     const { data } = await getAllProjects();
-    console.log(data);
-    return (
+return (
         <div className="mx-[80px] mt-10">
             <h1 className="text-white text-4xl font-bold text-center mb-8">My Works</h1>
             <div className="grid grid-cols-2 gap-7">

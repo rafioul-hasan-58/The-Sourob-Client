@@ -8,7 +8,7 @@ const links = [
         color: "text-white",
     },
     {
-        href: "mailto:you@example.com",
+        href: "mailto:rafioulhasan2@gmail.com",
         label: "Email",
         icon: <FaEnvelope className="border-[0.5px] border-gray-600 border-t-0 w-[60px] h-[60px] group-hover:border-0 p-4  border-l-0" />,
         color: "text-red-500",
@@ -20,7 +20,7 @@ const links = [
         color: "text-white",
     },
     {
-        href: "https://wa.me/your-number",
+        href: "https://wa.me/01752966422",
         label: "WhatsApp",
         icon: <FaWhatsapp className="border-[1px] border-gray-600 border-t-0 w-[60px] h-[60px] group-hover:border-0 p-4 border-l-0" />,
         color: "text-green-500",

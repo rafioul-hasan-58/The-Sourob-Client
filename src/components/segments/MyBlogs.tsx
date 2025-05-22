@@ -5,7 +5,6 @@ import { Button } from "../ui/button";
 
 const MyBlogs = async () => {
     const { data } = await getAllBlogs();
-    console.log(data);
     return (
         <div className="lg:mx-[80px]">
             <h1 className="text-white text-4xl font-bold text-center my-8">My Blogs</h1>

@@ -23,9 +23,12 @@ const Contact = () => {
 
         try {
             const res = await sendMessage(data);
+            console.log(res);
             if (res.success) {
                 toast.success(res.message);
                 reset();
+            }else{
+                toast.error(res.errorSources[0].message)
             }
         } catch (error) {
             console.log(error);
@@ -51,6 +54,7 @@ const Contact = () => {
                                         name="name"
                                         placeholder=" Your Name"
                                         control={control}
+                                        className="text-white"
                                     />
                                 </div>
                                 <div className="mb-4 flex-1">
@@ -59,6 +63,7 @@ const Contact = () => {
                                         name="address"
                                         placeholder="Your Address"
                                         control={control}
+                                        className="text-white"
                                     />
                                 </div>
                             </div>
@@ -68,6 +73,7 @@ const Contact = () => {
                                     name="email"
                                     placeholder="Your Email"
                                     control={control}
+                                    className="text-white"
                                 />
                             </div>
                             <div className="mb-4 flex-1">
@@ -76,6 +82,7 @@ const Contact = () => {
                                     name="subject"
                                     placeholder="Subject"
                                     control={control}
+                                    className="text-white"
                                 />
                             </div>
                             <div className="mb-4 flex-1">
@@ -84,7 +91,8 @@ const Contact = () => {
                                     name="message"
                                     placeholder="Message"
                                     control={control}
-                                    className="h-[140px]"
+                                    className="h-[140px] text-white"
+
                                 />
                             </div>
                             <button type="submit" className="w-full flex items-center justify-center gap-1 cursor-pointer py-3 rounded-lg text-white transition-all duration-300 hover:-translate-y-1 bg-gradient-to-r from-purple-700 to-purple-500">
