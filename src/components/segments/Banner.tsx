@@ -33,9 +33,16 @@ const Banner = () => {
                 </div>
             </div>
             <div className="flex gap-4 lg:justify-start justify-center">
-                <button className="bg-purple-800 opacity-80 p-2 rounded-sm cursor-pointer hover:opacity-100 flex items-center gap-0.5 text-white">Download resume<IoMdCloudDownload className="text-xl" /></button>
-                <button className="cursor-pointer border p-2 flex items-center gap-1 border-purple-800 rounded-sm text-purple-500 opacity-90 hover:opacity-100">View resume <LuView className="text-xl" />
-                </button>
+                <a
+                    href="/sourob-resume-58.pdf"
+                    download
+                >
+                    <button className="bg-purple-800 opacity-80 p-2 rounded-sm cursor-pointer hover:opacity-100 flex items-center gap-0.5 text-white">Download resume<IoMdCloudDownload className="text-xl" /></button>
+                </a>
+                <a href="https://drive.google.com/file/d/143HeYwMCJZreCOe1BOLgEL3aC15pfmxH/view?usp=sharing">
+                    <button className="cursor-pointer border p-2 flex items-center gap-1 border-purple-800 rounded-sm text-purple-500 opacity-90 hover:opacity-100">View resume <LuView className="text-xl" />
+                    </button>
+                </a>
             </div>
         </div>
     );
