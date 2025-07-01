@@ -1,5 +1,4 @@
 'use client';
-import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -29,12 +28,6 @@ const Navbar = () => {
                     }
                 </ul>
                 {/* mobile menu */}
-                <button onClick={() => setIsOpen(!isOpen)} className="md:hidden lg:hidden">
-                    {
-                        isOpen ? <X /> : <Menu />
-                    }
-
-                </button>
                 <ul className={`flex md:hidden flex-col gap-4 px-10 py-20 fixed right-0 top-0 bottom-0 w-64 z-50 h-screen transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     {
                         navItems.map((nav, idx) => (<Link key={idx} onClick={() => setIsOpen(false)} href={`${nav.path}`}> <li>{nav.label}</li></Link>))

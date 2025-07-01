@@ -6,9 +6,9 @@ import { Button } from "../ui/button";
 const MyBlogs = async () => {
     const { data } = await getAllBlogs();
     return (
-        <div className="lg:mx-[80px]">
+        <div className="lg:mx-[80px] mx-2">
             <h1 className="text-white text-4xl font-bold text-center my-8">My Blogs</h1>
-            <div className="grid grid-cols-3 gap-5">
+            <div className="grid lg:grid-cols-3 grid-cols-1 gap-5">
                 {
                     data?.map((blog: IBlog, index: number) => (
                         <BlogCard key={index} blog={blog} />

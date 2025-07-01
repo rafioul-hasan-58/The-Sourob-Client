@@ -9,7 +9,7 @@ const ProjectCard = ({ project }: { project: IProject }) => {
         <div>
             <div className=" p-6 rounded-xl shadow-md hover:shadow-lg  duration-300 shrink border flex gap-3 bg-gradient-to-br from-[#3f0d75] via-[#5e2aa0] to-[#7e3ff2] hover:shadow-purple-500/40 hover:scale-[1.01] transition"
                 style={{ boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)" }}>
-                <div className="w-[60%] rounded-xl overflow-hidden cursor-pointer">
+                <div className="lg:w-[60%] rounded-xl overflow-hidden cursor-pointer">
                     <Link href={`/portfolio/${project._id}`}>
                         {
                             project?.images ? (<Image
