@@ -19,7 +19,7 @@ const ProjectDetails = ({ project }: DetailProject) => {
         }
     }, [project?.images])
     return (
-        <div className="p-10 max-w-screen overflow-hidden bg-gray-900 dark:bg-gray-800">
+        <div className="lg:p-10 max-w-screen overflow-hidden bg-gray-900 dark:bg-gray-800">
             <div className="flex">
                 {currentImg ? (
                     <Image
@@ -65,14 +65,14 @@ const ProjectDetails = ({ project }: DetailProject) => {
                             width={40}
                             height={50}
                         />
-                        <div className="flex">
+                        <div className="flex lg:flex-row flex-col">
                             <div>
                                 <h1 className="mx-2 font-semibold text-gray-400">Rafioul Hasan</h1>
                                 <p className="mx-1 text-xs text-gray-500 ml-2">{project?.createdAt && format(new Date(project.createdAt), 'dd, MMM, yyyy')}</p>
                             </div>
                             <div className="flex gap-3 mt-2">
-                                <Button onClick={() => window.open(`${project.github_link_client}`)} className="rounded-none">View Client <Github className="" /></Button>
-                                <Button onClick={() => window.open(`${project.github_link_server}`)} className="rounded-none">View Server <Github className="" /></Button>
+                                <Button onClick={() => window.open(`${project.github_link_client}`)} className="rounded-none  border">View Client <Github className="" /></Button>
+                                <Button onClick={() => window.open(`${project.github_link_server}`)} className="rounded-none  border">View Server <Github className="" /></Button>
                                 <Button onClick={() => window.open(`${project.live_link}`, "_blank")} className="rounded-none bg-blue-500 hover:bg-blue-600">See Live <Link /></Button>
                             </div>
                         </div>

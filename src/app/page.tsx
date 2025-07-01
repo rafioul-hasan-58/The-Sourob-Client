@@ -11,16 +11,28 @@ import SocialContact from "@/components/SocialContact";
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="scroll-smooth">
       <SocialContact />
       <Navbar />
       <Banner />
-      <Skills />
-      <Tools />
-      <AboutMe />
-      <MyProjects />
-      <MyBlogs />
-      <Contact />
+      <div id="skills">
+        <Skills />
+      </div>
+      <div id="tools">
+        <Tools />
+      </div>
+      <div id="about">
+        <AboutMe />
+      </div>
+      <div id="projects">
+        <MyProjects />
+      </div>
+      <div id="blogs">
+        <MyBlogs />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
       <Footer />
     </div>
   );

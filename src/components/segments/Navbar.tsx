@@ -5,12 +5,14 @@ import { useState } from "react";
 
 const Navbar = () => {
     const navItems = [
-        { label: 'Home', path: '/' },
-        { label: 'About', path: '/about' },
-        { label: 'Projects', path: '/projects' },
-        { label: 'Blogs', path: '/blogs' },
-        { label: 'dashboard', path: '/dashboard' },
+        { label: 'Home', path: '#top', type: 'anchor' },
+        { label: 'About', path: '#about', type: 'anchor' },
+        { label: 'Contact', path: '#contact', type: 'anchor' },
+        { label: 'Skills', path: '#skills', type: 'anchor' },
+        { label: 'Projects', path: '#projects', type: 'anchor' },
+        { label: 'Blogs', path: '#blogs', type: 'anchor' },
     ];
+
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
     return (
