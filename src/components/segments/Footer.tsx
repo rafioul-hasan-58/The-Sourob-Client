@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
             Have a project in mind or want to collaborate? Feel free to reach out!
           </p>
           <div className="flex gap-4">
-            <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+            <a href="https://github.com/rafioul-hasan-58" target="_blank" aria-label="GitHub">
               <Github className="h-5 w-5 hover:text-purple-400 transition" />
             </a>
             <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">

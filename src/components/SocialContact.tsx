@@ -1,4 +1,5 @@
-import { FaGithub, FaEnvelope, FaUserAlt, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import { RiFileUserLine } from "react-icons/ri";
 
 const links = [
     {
@@ -16,7 +17,7 @@ const links = [
     {
         href: "https://drive.google.com/file/d/143HeYwMCJZreCOe1BOLgEL3aC15pfmxH/view?usp=sharing",
         label: "Resume",
-        icon: <FaUserAlt className="border-[1px] border-gray-600 border-t-0 w-[60px] h-[60px] group-hover:border-0 p-4  border-l-0" />,
+        icon: <RiFileUserLine className="border-[1px] border-gray-600 border-t-0 w-[60px] h-[60px] group-hover:border-0 p-4  border-l-0" />,
         color: "text-white",
     },
     {
@@ -40,7 +41,7 @@ export default function SocialContact() {
                     className="group relative flex items-center"
                 >
                     {/* Bordered container that expands on hover */}
-                    <div className="overflow-hidden transition-all duration-300 border  border-transparent group-hover:border-purple-500 group-hover:w-40 w-[65px] h-full   bg-black flex items-center">
+                    <div className="overflow-hidden transition-all duration-300 border  border-transparent group-hover:border-purple-500 group-hover:w-40 w-[62px] h-full   bg-black flex items-center">
                         {/* Icon */}
                         <div
                             className={` ${link.color} transition-transform duration-300 group-hover:translate-x-2`}
