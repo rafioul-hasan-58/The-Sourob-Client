@@ -7,7 +7,7 @@ import { format } from 'date-fns'
 const ProjectCard = ({ project }: { project: IProject }) => {
     return (
         <div>
-            <div className=" p-6 rounded-xl shadow-md hover:shadow-lg  duration-300 shrink border flex gap-3 bg-gradient-to-br from-[#3f0d75] via-[#5e2aa0] to-[#7e3ff2] hover:shadow-purple-500/40 hover:scale-[1.01] transition"
+            <div className="bg-blue-900/60 p-6 rounded-xl shadow-md hover:shadow-lg  duration-300 shrink border flex gap-3   border-blue-900/60 hover:border-blue-900 hover:scale-[1.01] transition"
                 style={{ boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)" }}>
                 <div className="lg:w-[60%] rounded-xl overflow-hidden cursor-pointer">
                     <Link href={`/projects/details/${project._id}`}>
@@ -17,7 +17,7 @@ const ProjectCard = ({ project }: { project: IProject }) => {
                                 height={220}
                                 src={project?.images[0]}
                                 alt="image"
-                                className="w-[300px] h-[220px] object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                                className="w-[310px] h-[220px] object-cover "
                             />) : null
                         }
 

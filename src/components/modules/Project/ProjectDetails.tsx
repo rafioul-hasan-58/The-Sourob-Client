@@ -20,10 +20,10 @@ const ProjectDetails = ({ project }: DetailProject) => {
     }, [project?.images])
     return (
         <div className="lg:p-10 max-w-screen overflow-hidden bg-gray-900 dark:bg-gray-800">
-            <div className="flex">
+            <div className="flex lg:flex-row flex-col">
                 {currentImg ? (
                     <Image
-                        className=" w-full h-[450px] p-4.5"
+                        className=" w-full lg:h-[450px] p-4.5"
                         src={currentImg}
                         width={600}
                         height={300}
@@ -34,9 +34,9 @@ const ProjectDetails = ({ project }: DetailProject) => {
                         No Image
                     </div>
                 )}
-                <div className="grid grid-cols-1 pt-4.5 my-0.5">
+                <div className="grid lg:grid-cols-1 grid-cols-3 pt-4.5 my-0.5 lg:mx-0 mx-4">
                     {
-                        project?.images?.length > 0 && project.images.slice(0).map((img, idx) => (<Image key={idx} src={img} alt={img + idx} width={250} height={200} onClick={() => setCurrentImg(img)} className={`${currentImg === img ? 'border-2 border-purple-500' : ''}`} />))
+                        project?.images?.length > 0 && project.images.slice(0).map((img, idx) => (<Image key={idx} src={img} alt={img + idx} width={250} height={200} onClick={() => setCurrentImg(img)} className={`lg:w-[250px] w-[200px] ${currentImg === img ? 'border-2 border-purple-500' : ''}`} />))
                     }
                 </div>
             </div>
@@ -58,17 +58,20 @@ const ProjectDetails = ({ project }: DetailProject) => {
 
                 <div className="mt-4">
                     <div className="flex items-center">
-                        <Image
-                            className="object-cover h-10 rounded-full"
-                            src="https://i.ibb.co/1JPrQPQh/portfolio.jpg"
-                            alt="Avatar"
-                            width={40}
-                            height={50}
-                        />
-                        <div className="flex lg:flex-row flex-col">
-                            <div>
-                                <h1 className="mx-2 font-semibold text-gray-400">Rafioul Hasan</h1>
+
+                        <div className="flex lg:flex-row flex-col gap-3">
+                            <div className="flex items-center">
+                                <Image
+                                    className="object-cover h-10 rounded-full"
+                                    src="https://i.ibb.co/1JPrQPQh/portfolio.jpg"
+                                    alt="Avatar"
+                                    width={40}
+                                    height={50}
+                                />
+                              <div>
+                                  <h1 className="mx-2 font-semibold text-gray-400">Rafioul Hasan</h1>
                                 <p className="mx-1 text-xs text-gray-500 ml-2">{project?.createdAt && format(new Date(project.createdAt), 'dd, MMM, yyyy')}</p>
+                              </div>
                             </div>
                             <div className="flex gap-3 mt-2">
                                 <Button onClick={() => window.open(`${project.github_link_client}`)} className="rounded-none  border">View Client <Github className="" /></Button>
