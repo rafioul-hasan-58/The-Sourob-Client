@@ -1,7 +1,7 @@
+import ProjectCard from "@/components/modules/Project/ProjectCard";
+import { Button } from "@/components/ui/button";
 import { getAllProjects } from "@/services/project";
-import ProjectCard from "../modules/Project/ProjectCard";
 import { IProject } from "@/types";
-import { Button } from "../ui/button";
 
 const MyProjects = async () => {
     const { data } = await getAllProjects();

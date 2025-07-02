@@ -1,13 +1,13 @@
-import AboutMe from "@/components/segments/AboutMe";
-import Banner from "@/components/segments/Banner";
+import AboutMe from "@/components/modules/Hero/AboutMe";
+import Banner from "@/components/modules/Hero/Banner";
 import Contact from "@/components/modules/Contact/Contact";
-import Footer from "@/components/segments/Footer";
-import MyProjects from "@/components/segments/MyProjects";
-import Navbar from "@/components/segments/Navbar";
-import Skills from "@/components/segments/Skills";
-import Tools from "@/components/segments/Tools";
-import SocialContact from "@/components/SocialContact";
+import Footer from "@/components/shared/Sections/Footer";
+import Navbar from "@/components/shared/Sections/Navbar";
+import SocialContact from "@/components/shared/Sections/SocialContact";
 import MyBlogs from "./blogs/page";
+import MyProjects from "./projects/page";
+import Skills from "@/components/modules/Skills&Tools/Skills";
+import Tools from "@/components/modules/Skills&Tools/Tools";
 
 const Home = () => {
   return (

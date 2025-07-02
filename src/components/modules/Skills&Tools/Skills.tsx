@@ -1,5 +1,6 @@
-import { skills } from "../../../public/skillData";
-import SkillCard from "../SkillCard";
+import { skills } from "./skillData";
+import SkillCard from "./SkillCard";
+
 
 const Skills = () => {
     return (
