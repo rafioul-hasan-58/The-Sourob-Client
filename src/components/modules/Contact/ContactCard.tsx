@@ -97,7 +97,7 @@ const ContactCard = () => {
                                     rel="noopener noreferrer"
                                     aria-label={social.label}
                                 >
-                                    <div className="border p-2 w-[45px] rounded-sm bg-transparent hover:bg-gradient-to-tr from-purple-500 via-sky-400 to-blue-500 transition-all duration-300 ease-in-out">
+                                    <div className="border p-2 w-[45px] rounded-sm bg-transparent hover:bg-gradient-to-tr from-purple-500 via-sky-400 to-blue-500 transition-all duration-300 ease-in-out flex justify-center items-center">
                                         <Icon className="h-6 w-6 text-white hover:text-white transition" />
                                     </div>
                                 </a>

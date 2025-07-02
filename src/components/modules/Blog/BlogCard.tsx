@@ -9,7 +9,7 @@ const BlogCard = ({ blog }: { blog: IBlog }) => {
         <div>
             <div className="bg-gray-800 text-white shadow-xl hover:shadow-lg transition-shadow duration-300 shrink p-4 rounded-xl"
                 style={{ boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)" }}>
-                <Link href={`/blogs/${blog?._id}`}>
+                <Link href={`/blogs/details/${blog?._id}`}>
                     <div className=" rounded-xl overflow-hidden cursor-pointer">
                         {
                             blog?.images ? (<Image

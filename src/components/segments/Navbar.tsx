@@ -20,7 +20,7 @@ const Navbar = () => {
             <nav className=" w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
                 <a className="flex" href="#top">
                     <p className="text-3xl font-semibold italic bg-gradient-to-r from-purple-500 to-sky-400 text-transparent bg-clip-text font-[cursive] ">
-                        Rafioul Sourav
+                        Rafioul Sourob
                     </p>
                     <p className="mt-6 h-2 w-2 rounded-full bg-pink-500"></p>
                 </a>

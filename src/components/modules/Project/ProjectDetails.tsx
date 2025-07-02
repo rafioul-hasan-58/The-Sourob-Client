@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Github, Link } from "lucide-react";
 import { IProject } from "@/types";
 interface DetailProject {
-    project: IProject
+project: IProject
 }
 const ProjectDetails = ({ project }: DetailProject) => {
     const fallbackImage = 'https://i.ibb.co/mryzXPbL/office-605503-1280.jpg';
