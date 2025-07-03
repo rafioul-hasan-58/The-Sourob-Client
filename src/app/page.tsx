@@ -11,7 +11,7 @@ import Tools from "@/components/modules/Skills&Tools/Tools";
 
 const Home = () => {
   return (
-    <div className="scroll-smooth">
+    <div className="max-w-screen-2xl md:mx-auto">
       <div className="lg:block hidden">
         <SocialContact />
       </div>

@@ -7,7 +7,7 @@ import { format } from 'date-fns'
 const ProjectCard = ({ project }: { project: IProject }) => {
     return (
         <div>
-            <div className="bg-blue-900/60 p-6 rounded-xl shadow-md hover:shadow-lg  duration-300 shrink border flex gap-3   border-blue-900/60 hover:border-blue-900 hover:scale-[1.01] transition"
+            <div className="bg-blue-900/60 p-6 rounded-xl  hover:shadow-lg  duration-300 shrink border flex gap-3 lg:flex-row flex-col border-blue-900/60 hover:border-blue-900 hover:scale-[1.01] transition"
                 style={{ boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)" }}>
                 <div className="lg:w-[60%] rounded-xl overflow-hidden cursor-pointer">
                     <Link href={`/projects/details/${project._id}`}>
